@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FlightDetailsActivity">
+
+    <TextView
+        android:id="@+id/detailsView"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/titleBarHeight"
+        android:background="@color/primary_color"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/flight_details"
+        android:textColor="@color/white"
+        android:textSize="@dimen/titles_font_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="350dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/passenger" />
+
+            <TextView
+                android:id="@+id/flightDetailsFirstNameET"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView13"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/first_name_raw_big"
+                android:textSize="@dimen/input_string_size" />
+
+            <TextView
+                android:id="@+id/flightDetailsLastNameET"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/flightDetailsFirstNameET"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="0dp"
+                android:layout_toEndOf="@+id/flightDetailsFirstNameET"
+                android:text="@string/last_name_raw_big"
+                android:textSize="@dimen/input_string_size"/>
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/flightDetailsFirstNameET"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/departure" />
+
+            <TextView
+                android:id="@+id/flightDetailsDepartDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView15"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/depart_date"
+                android:textSize="@dimen/input_string_size" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/flightDetailsDepartDate"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/from" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/flightDetailsDepartDate"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:text="@string/to" />
+
+            <TextView
+                android:id="@+id/flightDetailsFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView17"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/from"
+                android:textSize="@dimen/input_string_size" />
+
+            <TextView
+                android:id="@+id/flightDetailsTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView18"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:text="@string/to"
+                android:textSize="@dimen/input_string_size" />
+
+            <TextView
+                android:id="@+id/flightDetailsPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="50dp"
+                android:text="@string/price"
+                android:textColor="@color/primary_color"
+                android:textSize="@dimen/input_string_size"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/flightDetailsCancelBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/primary_color"
+        android:padding="@dimen/padding"
+        android:text="Cancel"
+        android:textSize="@dimen/input_string_size"
+        app:layout_constraintEnd_toEndOf="@+id/cardView2"
+        app:layout_constraintStart_toStartOf="@+id/cardView2"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

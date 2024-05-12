@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10dp">
+
+    <RelativeLayout
+        android:id="@+id/cardDetails"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:clickable="true">
+
+        <TextView
+            android:id="@+id/flightItemDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/inside_card_margin"
+            android:text="Date" />
+
+        <TextView
+            android:id="@+id/flightItemFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/flightItemDate"
+            android:layout_margin="@dimen/inside_card_margin"
+            android:layout_marginTop="0dp"
+            android:text="From" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/flightItemFrom"
+            android:layout_marginStart="@dimen/inside_card_margin"
+            android:layout_marginTop="0dp"
+            android:layout_toEndOf="@+id/flightItemFrom"
+            android:layout_toRightOf="@id/flightItemFrom"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/flightItemTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textView7"
+            android:layout_marginStart="@dimen/inside_card_margin"
+            android:layout_marginTop="0dp"
+            android:layout_toEndOf="@+id/textView7"
+            android:text="To" />
+
+        <TextView
+            android:id="@+id/flightItemPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/flightItemFrom"
+            android:layout_margin="@dimen/inside_card_margin"
+            android:layout_marginTop="0dp"
+            android:text="price"
+            android:textColor="@color/primary_color"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/flightItemBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="0dp"
+            android:text="@string/reserve"
+            android:backgroundTint="@color/primary_color" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

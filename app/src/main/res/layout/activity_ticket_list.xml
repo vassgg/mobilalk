@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TicketListActivity">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:itemBackground="@drawable/selector"
+        app:itemHorizontalTranslationEnabled="false"
+        app:itemIconSize="@dimen/menu_items_size"
+        app:itemIconTint="@drawable/selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/titleBarHeight"
+        android:background="@color/primary_color"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/search_flights"
+        android:textColor="@color/white"
+        android:textSize="@dimen/titles_font_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="40dp"
+        android:paddingTop="30dp"
+        android:paddingRight="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/from" />
+
+        <TextView
+            android:id="@+id/from_selector"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:layout_below="@+id/textView2"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/editbox_background"
+            android:gravity="center_vertical"
+            android:hint="@string/choose_location"
+            android:paddingStart="10dp"
+            app:drawableEndCompat="@drawable/baseline_arrow_drop_down_24" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/from_selector"
+            android:text="@string/to" />
+
+        <TextView
+            android:id="@+id/to_selector"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:layout_below="@+id/textView3"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/editbox_background"
+            android:gravity="center_vertical"
+            android:hint="@string/choose_location"
+            android:paddingStart="10dp"
+            app:drawableEndCompat="@drawable/baseline_arrow_drop_down_24" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/to_selector"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/oneWay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/one_way"
+                app:buttonTint="@color/primary_color" />
+
+            <RadioButton
+                android:id="@+id/retour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/retour"
+                app:buttonTint="@color/primary_color" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radioGroup"
+            android:layout_marginTop="0dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/depart_date" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/return_date" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayout"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/depart_date"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:contextClickable="true"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:hint="@string/select_date"
+                app:drawableEndCompat="@drawable/baseline_arrow_drop_down_24" />
+
+            <TextView
+                android:id="@+id/return_date"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:contextClickable="true"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:hint="@string/select_date"
+                app:drawableEndCompat="@drawable/baseline_arrow_drop_down_24" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/searchBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayout2"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/primary_color"
+            android:text="@string/search"
+            android:textSize="@dimen/button_text_size" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/ticketListEmptyTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/there_is_no_flight_on_this_date"
+        android:textColor="@color/primary_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="@dimen/input_string_size"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

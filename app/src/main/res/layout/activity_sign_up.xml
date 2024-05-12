@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity">
+
+    <EditText
+        android:id="@+id/firstnameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:hint="@string/firstname"
+        android:inputType="text"
+        android:padding="@dimen/padding"
+        android:textSize="@dimen/input_string_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <EditText
+        android:id="@+id/lastnameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:padding="@dimen/padding"
+        android:textSize="@dimen/input_string_size"
+        android:hint="@string/lastname"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstnameEditText" />
+
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:padding="@dimen/padding"
+        android:textSize="@dimen/input_string_size"
+        android:hint="@string/e_mail"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lastnameEditText" />
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:padding="@dimen/padding"
+        android:textSize="@dimen/input_string_size"
+        android:hint="@string/password"
+
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailEditText" />
+
+    <EditText
+        android:id="@+id/passwordAgainEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:padding="@dimen/padding"
+        android:textSize="@dimen/input_string_size"
+        android:hint="@string/password_again"
+
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordEditText" />
+
+    <LinearLayout
+        android:layout_width="@dimen/twoButtonInRow"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordAgainEditText">
+
+        <Button
+            android:id="@+id/signUpButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:padding="@dimen/padding"
+            android:onClick="signUp"
+            android:backgroundTint="@color/primary_color"
+            android:text="@string/sign_up"
+            android:textSize="@dimen/input_string_size"
+            tools:ignore="UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:padding="@dimen/padding"
+            android:onClick="cancel"
+            android:backgroundTint="@color/primary_color"
+            android:text="@string/cancel"
+            android:textSize="@dimen/input_string_size"
+            tools:ignore="UsingOnClickInXml" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

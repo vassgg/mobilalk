@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="input_string_size">20sp</dimen>
+    <dimen name="padding">20dp</dimen>
+    <dimen name="titles_font_size">30sp</dimen>
+    <dimen name="menu_items_size">40dp</dimen>
+    <dimen name="button_text_size">15sp</dimen>
+    <dimen name="inside_card_margin">5dp</dimen>
+    <dimen name="twoButtonInRow">320dp</dimen>
+    <dimen name="titleBarHeight">80dp</dimen>
+</resources>

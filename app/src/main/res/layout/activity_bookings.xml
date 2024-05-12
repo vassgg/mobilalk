@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookingsActivity">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemBackground="@drawable/selector"
+
+        app:itemIconSize="@dimen/menu_items_size"
+        app:itemIconTint="@drawable/selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/titleBarHeight"
+        android:background="@color/primary_color"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/bookings"
+        android:textColor="@color/white"
+        android:textSize="@dimen/titles_font_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bookingsEmptyMessageTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/you_didn_t_reserve_flight_yet"
+        android:textColor="@color/primary_color"
+        android:textSize="@dimen/input_string_size"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/bookingRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+</androidx.constraintlayout.widget.ConstraintLayout>
